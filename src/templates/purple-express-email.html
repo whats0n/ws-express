@@ -1,0 +1,612 @@
+---
+title: 'Purple Express'
+---
+{% extends "layouts/_layout-email.html" %}
+
+{% block content %}
+	
+	<table
+		border="0"
+		cellspacing="0"
+		cellpadding="0"
+		width="600"
+		style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 600px; text-align: center;"
+	>
+		<tr>
+			<td>
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td style="vertical-align: top; padding: 9px 12px 3px; width: 49px; font-size: 0;">
+							<img src="img/header-lines.png" alt="/" style="width: 100%; font-size: 0;">
+						</td>
+						<td style="vertical-align: middle; font-size: 0;">
+							<img src="img/logo.png" alt="Purple Express" style="width: 144px; font-size: 16px;">
+						</td>
+						<td style="vertical-align: top; padding: 0 20px 20px; width: 80px; font-size: 0;">
+							<img src="img/b2b-logo.png" alt="B2B Soft" style="width: 100%; font-size: 16px;">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="background: #492e6a">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td style="padding: 5px 12px 0; font-size: 0;">
+							<div style="overflow: hidden;">
+								<img src="img/lines.png" alt="/" style="font-size: 0;">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 0 12px 20px; font-size: 0;">
+							<img src="img/baggage.png" alt="Comp Express" style="width: 65%; max-width: 100%; font-size: 24px; font-weight: 700;">
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 0;">
+							<img src="img/comp-express-city.gif" alt="/" style="width: 100%; font-size: 0;">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 6px 24px; background: #9361d4">
+				<table
+					class="v-date"
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td class="v-date__item" style="padding: 6px; color: #fff; font-size: 18px; font-weight: 500; line-height: 22px; text-align: left;">HGR WIRELESS, LLC</td>
+						<td class="v-date__item" style="padding: 6px; color: #fff; font-size: 14px; font-style: italic; line-height: 16px; text-align: right;">Report from 01/01/2019 to 01/13/2019</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 45px 28px 40px;">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: left;"
+				>
+					{% for item in [
+						'Please note a high amount of partially or overpaid transactions.',
+						'This are mostly due to the difference in EDLP compensation for iPhone 6S and 6S Plus purchased before or after November 21, 2018.',
+						'Cost is used to provide correct expectation so please make sure to enter correct cost upon receiving Purchase Orders.'
+					] %}
+						<tr>
+							<td style="padding: 0; margin: 0; font-size: 16px; line-height: 1.5;">{{item | safe}}</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 0 15px;">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: left;"
+				>
+					{% for item in [
+						'Download Reconciliation Report',
+						'Download Another Report'
+					] %}
+						<tr>
+							<td style="padding: 13px 15px; background: #f1eff0; font-size: 16px; line-height: 20px;">{{item | safe}}</td>
+							<td style="padding: 13px 0; width: 49px; background: #db8c36; font-size: 0; text-align: center;">
+								<img src="img/download.png" alt="/" style="width: 18px; font-size: 0; background: none;">
+							</td>
+						</tr>
+						{% if not loop.last %}
+							<tr>
+								<td
+									colspan="2"
+									style="height: 4px; background: #fff;"
+								></td>
+							</tr>
+						{% endif %}
+					{% endfor %}
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 50px 15px 33px;">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td style="color: #492e6a; font-size: 0;">
+							<img src="img/calendar.png" alt="/" style="vertical-align: top; width: 22px; font-size: 0;">
+							<strong style="padding-left: 8px; font-size: 24px; font-weight: 500; line-height: 28px;">Your week in review</strong>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 0 15px 22px;">
+				<table
+					class="v-body"
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					{% for item in [
+						{
+							simple: true,
+							items: [
+								{
+									value: '500',
+									text: 'Activations <strong>processed</strong> in total with a forecasted expected commission of <strong>$2.000</strong>'
+								},
+								{
+									value: '450',
+									text: 'Activations <strong>fully paid</strong> with comission totaling <strong>$1.200</strong>'
+								}
+							]
+						},
+						{
+							value: '30',
+							text: 'Activations <strong>partially paid</strong>, leaving a balance of <strong>400</strong> un-paid',
+							list: [
+								{
+									label: '3 Day Reactivation Rule:',
+									value: '10 transactions'
+								},
+								{
+									label: 'Account Balance Rule:',
+									value: '15 transactions'
+								},
+								{
+									label: 'Active Sub Rule:',
+									value: '5 transactions'
+								}
+							]
+						},
+						{
+							simple: true,
+							change: true,
+							items: [
+								{
+									value: '20',
+									text: 'Activations are <strong>pending payment</strong> with <strong>$400</strong> forecasted'
+								},
+								{
+									value: '97%',
+									text: 'or <strong>485</strong> activations are qualified leaving <strong>15</strong> disqualified transactions '
+								}
+							]
+						}
+					] %}
+						{% if item.simple %}
+							{% if not item.change %}
+								{% set primaryColor = '#fff' %}
+								{% set primaryBG = '#492e6a' %}
+								{% set secondaryColor = '#492e6a' %}
+								{% set secondaryBG = '#f1eff0' %}
+							{% else %}
+								{% set primaryColor = '#492e6a' %}
+								{% set primaryBG = '#f1eff0' %}
+								{% set secondaryColor = '#fff' %}
+								{% set secondaryBG = '#492e6a' %}
+							{% endif %}
+							<tr>
+								<td class="v-body__item" style="vertical-align: top; padding: 40px 20px 20px; color: {{primaryColor}}; background: {{primaryBG}};">
+									<table
+										border="0"
+										cellspacing="0"
+										cellpadding="0"
+										style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+									>
+										<tr>
+											<td style="padding-bottom: 10px; color: {{primaryColor}}; font-size: 72px; font-weight: 500; line-height: 1;">
+												<strong>{{item.items[0].value | safe}}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td style="color: {{primaryColor}}; font-size: 16px; line-height: 21px;">{{item.items[0].text | safe}}</td>
+										</tr>
+									</table>
+								</td>
+								<td class="v-body__hidden" style="vertical-align: middle; width: 14px;"></td>
+								<td class="v-body__item" style="vertical-align: top; padding: 40px 20px 20px; color: {{secondaryColor}}; background: {{secondaryBG}};">
+									<table
+										border="0"
+										cellspacing="0"
+										cellpadding="0"
+										style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+									>
+										<tr>
+											<td style="padding-bottom: 10px; color: {{secondaryColor}}; font-size: 72px; font-weight: 500; line-height: 1;">
+												<strong>{{item.items[1].value | safe}}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td style="color: {{secondaryColor}}; font-size: 16px; line-height: 21px;">{{item.items[1].text | safe}}</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						{% else %}
+							<tr>
+								<td class="v-body__item" style="vertical-align: top; padding: 40px 20px 20px; color: #fff; background: #db8c36;">
+									<table
+										border="0"
+										cellspacing="0"
+										cellpadding="0"
+										style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+									>
+										<tr>
+											<td style="padding-bottom: 10px; color: #fff; font-size: 72px; font-weight: 500; line-height: 1;">
+												<strong>{{item.value | safe}}</strong>
+											</td>
+										</tr>
+										<tr>
+											<td style="color: #fff; font-size: 16px; line-height: 21px;">{{item.text | safe}}</td>
+										</tr>
+									</table>
+								</td>
+								<td class="v-body__hidden" style="vertical-align: middle; width: 14px; background: #db8c36; font-size: 0; text-align: right;">
+									<img src="img/angle.png" alt="/">
+								</td>
+								<td class="v-body__item" style="vertical-align: top; padding: 18px 20px 19px 30px; color: #6e461b; background: #e9ba86;">
+									<table
+										border="0"
+										cellspacing="0"
+										cellpadding="0"
+										style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: left;"
+									>
+										{% for item in item.list %}
+											<tr>
+												<td style="padding: 7px 0; font-size: 16px; line-height: 21px;">
+													<span>{{item.label | safe}}</span>
+													<br>
+													<strong>{{item.value | safe}}</strong>
+												</td>
+											</tr>
+										{% endfor %}
+									</table>
+								</td>
+							</tr>
+						{% endif %}
+						{% if not loop.last %}
+							<tr>
+								<td
+									colspan="3"
+									style="height: 13px;"
+								></td>
+							</tr>
+						{% endif %}
+					{% endfor %}
+				</table>
+			</td>
+		</tr>
+		{% for item in [
+			{
+				icon: 'img/coins.png',
+				title: 'Comission Status',
+				img: 'img/comission-status.png'
+			},
+			{
+				icon: 'img/star.png',
+				title: 'Account Qualified vs Disqualified',
+				img: 'img/account-qualified-vs-disqualified.png'
+			},
+			{
+				icon: 'img/store.png',
+				title: 'Top 3 Stores with Disqualifications',
+				img: 'img/top-stores.png'
+			},
+			{
+				icon: 'img/user.png',
+				title: 'Top 3 Employees with Disqualifications',
+				img: 'img/top-employees.png'
+			}
+		] %}
+			<tr>
+				<td style="padding: 36px 20px;">
+					<table
+						border="0"
+						cellspacing="0"
+						cellpadding="0"
+						style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+					>
+						<tr>
+							<td style="color: #492e6a; font-size: 0;">
+								<img src="{{item.icon}}" alt="/" style="vertical-align: top; margin-top: 2px; height: 18px; font-size: 0;">
+								<strong style="padding-left: 10px; font-size: 21px; font-weight: 500; line-height: 24px;">{{item.title}}</strong>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-top: 31px; font-size: 0;">
+								<img src="{{item.img}}" alt="/" style="max-width: 100%;">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		{% endfor %}
+		<tr>
+			<td style="height: 53px;"></td>
+		</tr>
+		<tr>
+			<td style="padding: 69px 0 42px; background: #f1eff0;">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td style="padding: 0 20px; color: #492e6a; font-size: 0;">
+							<img src="img/schedule.png" alt="/" style="vertical-align: top; width: 19px; font-size: 0;">
+							<strong style="padding-left: 8px; font-size: 24px; font-weight: 500; line-height: 28px;">Take inmediate action</strong>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 34px 20px 29px; color: #492e6a;">
+							<strong style="font-size: 21px; font-weight: 500; line-height: 24px;">Top Disqualifiers</strong>
+						</td>
+					</tr>
+					{% set side = cycler('left', 'right') %}
+					{% set colors = cycler('#da8c36', '#492e6a') %}
+					{% set radiuses = cycler('10px 10px 10px 0', '10px 10px 0 10px') %}
+					{% for item in [
+						{
+							table: [
+								{
+									icon: 'img/alert.png',
+									content: [
+										{ title: '3 Day Reactivation Rule' },
+										{ text: 'This rule requires ABC, XYZ to eliminate disqualification.' }
+									]
+								},
+								{
+									icon: 'img/tools.png',
+									content: [
+										{ text: 'Rep training: Reinforce SIM / Device History lookup in Edge' },
+										{ btn: true }
+									]
+								}
+							]
+						},
+						{
+							table: [
+								{
+									icon: 'img/alert.png',
+									content: [
+										{ title: 'Account Balance Rule' },
+										{ text: 'This rule requires that no pending balance on the account by end of day of activation' }
+									]
+								},
+								{
+									icon: 'img/tools.png',
+									content: [
+										{ text: 'Rep training: Reinforce DUE inmediately full balance check in Edge.' },
+										{ btn: true }
+									]
+								}
+							]
+						},
+						{
+							table: [
+								{
+									icon: 'img/alert.png',
+									content: [
+										{ title: 'Active Sub Rule' },
+										{ text: 'This rule requires ABC, XYZ to eliminate disqualification.' }
+									]
+								},
+								{
+									icon: 'img/tools.png',
+									content: [
+										{ text: 'Rep training: Reinforce SIM / Device History lookup in Edge' },
+										{ btn: true }
+									]
+								}
+							]
+						}
+					] %}
+						{% set color = colors.next() %}
+						{% set borderRadius = radiuses.next() %}
+						{% set currentSide = side.next() %}
+						<tr>
+							<td style="padding: 10px 0;">
+								<table
+									border="0"
+									cellspacing="0"
+									cellpadding="0"
+									style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: left;"
+								>
+									<tr>
+										<td style="vertical-align: bottom; padding-left: 1px; width: 16px; font-size: 0; text-align: right;">
+											{% if currentSide == 'left' %}
+												<div style="border-style: solid; border-width: 0 0 16px 16px; border-color: transparent {{color}} {{color}} transparent; width: 0; height: 0;"></div>
+											{% endif %}
+										</td>
+										<td style="padding: 6px 15px 13px; border-radius: {{borderRadius}}; color: #fff; background: {{color}};">
+											<table
+												border="0"
+												cellspacing="0"
+												cellpadding="0"
+												style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%;"
+											>
+												{% for item in item.table %}
+													<tr>
+														<td style="vertical-align: top; padding-top: 22px; width: 36px; font-size: 0;">
+															<img src="{{item.icon}}" alt="/" style="height: 18px; background: none; font-size: 0;">
+														</td>
+														<td style="padding: 22px 0 15px;">
+															<table
+																border="0"
+																cellspacing="0"
+																cellpadding="0"
+																style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%;"
+															>
+																{% for item in item.content %}
+																	<tr>
+																		{% if item.title %}
+																			<td style="padding-bottom: 12px; color: #fff; font-size: 18px; font-weight: 500; line-height: 1;">{{item.title}}</td>
+																		{% elseif item.btn %}
+																			<td style="padding: 25px 0 10px;">
+																				<a
+																					href="#"
+																					style="padding: 10px 25px; border-radius: 18px; color: {{color}}; background: #fff; font-size: 16px; font-weight: 700; line-height: 20px; text-decoration: none;"
+																				>Learn More</a>
+																			</td>
+																		{% else %}
+																			<td style="color: #fff; font-size: 16px; line-height: 20px;">{{item.text}}</td>
+																		{% endif %}
+																	</tr>
+																{% endfor %}
+															</table>
+														</td>
+													</tr>
+													{% if not loop.last %}
+														<tr>
+															<td
+																colspan="2"
+																style="height: 2px; background: #fff;"
+															></td>
+														</tr>
+													{% endif %}
+												{% endfor %}
+											</table>
+										</td>
+										<td style="vertical-align: bottom; padding-right: 1px; width: 16px; font-size: 0; text-align: left;">
+											{% if currentSide == 'right' %}
+												<div style="border-style: solid; border-width: 16px 0 0px 16px; border-color: transparent transparent {{color}} {{color}}; width: 0; height: 0;"></div>
+											{% endif %}
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="background-color: #492e6a; background-image: url(img/footer.png); background-position: center center; background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover;">
+				<table
+					border="0"
+					cellspacing="0"
+					cellpadding="0"
+					style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+				>
+					<tr>
+						<td style="padding: 61px 0 15px;">
+							<table
+								border="0"
+								cellspacing="0"
+								cellpadding="0"
+								style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;"
+							>
+								<tr>
+									<td></td>
+									<td style="width: 124px; font-size: 0;">
+										<img src="img/footer-user.png" alt="/" style="border: 2px solid #fff; border-radius: 50%; width: 120px;">
+									</td>
+									<td></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="color: #fff; font-size: 24px; line-height: 1;">Meet <strong style="font-weight: 500;">Chris Geraci</strong></td>
+					</tr>
+					<tr>
+						<td style="padding: 8px 0 12px; color: #fff; font-size: 18px; line-height: 24px;">your dedicated B2B POS Account Manager</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom: 60px;">
+							<table
+								class="v-footer"
+								border="0"
+								cellspacing="0"
+								cellpadding="0"
+								style="table-layout: fixed; padding: 0; margin: 0 auto; border-collapse: collapse; border-spacing: 0; width: 100%; max-width: 500px;"
+							>
+								<tr>
+									<td style="padding: 18px 12px; text-align: center;">
+										<a
+											href="#"
+											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+										>Schedule a review</a>
+									</td>
+									<td style="padding: 18px 12px; text-align: center;">
+										<a
+											href="#"
+											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+										>Report an issue</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" style="padding: 18px 12px; text-align: center;">
+										<a
+											href="#"
+											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+										>Give us feedback</a>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+{% endblock %}
+
+{% block styles %}
+  <style>
+  	@media only screen and (max-width: 500px) {
+  		table[class="v-footer"] td {
+  			display: block !important;
+  		}
+  		table[class="v-body"] {
+  			display: block !important;
+  		}
+  		table[class="v-body"] td[class="v-body__item"] {
+  			display: block !important;
+  		}
+  		table[class="v-body"] td[class="v-body__hidden"] {
+  			display: none !important;
+  		}
+  		table[class="v-body"] td[class="v-body__item"] table {
+  			text-align: center !important;
+  		}
+  		table[class="v-date"] {
+  			display: block !important;
+  		}
+  		table[class="v-date"] td[class="v-date__item"] {
+  			display: block !important;
+  			text-align: left !important;
+  		}
+  	}
+  </style>
+{% endblock %}
