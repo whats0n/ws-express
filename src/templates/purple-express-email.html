@@ -472,10 +472,16 @@ title: 'Purple Express'
 																			<td style="padding-bottom: 12px; color: #fff; font-size: 18px; font-weight: 500; line-height: 1;">{{item.title}}</td>
 																		{% elseif item.btn %}
 																			<td style="padding: 25px 0 10px;">
-																				<a
-																					href="#"
-																					style="padding: 10px 25px; border-radius: 18px; color: {{color}}; background: #fff; font-size: 16px; font-weight: 700; line-height: 20px; text-decoration: none;"
-																				>Learn More</a>
+																				<table cellspacing="0" cellpadding="0">
+																					<tr>
+																						<td style="padding: 10px 25px; border-radius: 18px; background: #fff;" bgcolor="#fff">
+																							<a
+																								href="#"
+																								style="color: {{color}}; font-size: 16px; font-weight: 700; line-height: 20px; text-decoration: none;"
+																							>Learn More</a>
+																						</td>
+																					</tr>
+																				</table>
 																			</td>
 																		{% else %}
 																			<td style="color: #fff; font-size: 16px; line-height: 20px;">{{item.text}}</td>
@@ -552,24 +558,42 @@ title: 'Purple Express'
 							>
 								<tr>
 									<td style="padding: 18px 12px; text-align: center;">
-										<a
-											href="#"
-											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
-										>Schedule a review</a>
+										<table cellspacing="0" cellpadding="0">
+											<tr>
+												<td style="padding: 6px 32px; border-radius: 18px; background: #fff;" bgcolor="#fff">
+													<a
+														href="#"
+														style="color: #492e6a; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+													>Schedule a review</a>
+												</td>
+											</tr>
+										</table>
 									</td>
 									<td style="padding: 18px 12px; text-align: center;">
-										<a
-											href="#"
-											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
-										>Report an issue</a>
+										<table cellspacing="0" cellpadding="0">
+											<tr>
+												<td style="padding: 6px 32px; border-radius: 18px; background: #fff;" bgcolor="#fff">
+													<a
+														href="#"
+														style="color: #492e6a; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+													>Report an issue</a>
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 								<tr>
 									<td colspan="2" style="padding: 18px 12px; text-align: center;">
-										<a
-											href="#"
-											style="padding: 6px 32px; border-radius: 18px; color: #492e6a; background: #fff; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
-										>Give us feedback</a>
+										<table cellspacing="0" cellpadding="0">
+											<tr>
+												<td style="padding: 6px 32px; border-radius: 18px; background: #fff;" bgcolor="#fff">
+													<a
+														href="#"
+														style="color: #492e6a; font-size: 18px; font-weight: 700; line-height: 20px; text-decoration: none;"
+													>Give us feedback</a>
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
@@ -583,30 +607,30 @@ title: 'Purple Express'
 {% endblock %}
 
 {% block styles %}
-  <style>
-  	@media only screen and (max-width: 500px) {
-  		table[class="v-footer"] td {
-  			display: block !important;
-  		}
-  		table[class="v-body"] {
-  			display: block !important;
-  		}
-  		table[class="v-body"] td[class="v-body__item"] {
-  			display: block !important;
-  		}
-  		table[class="v-body"] td[class="v-body__hidden"] {
-  			display: none !important;
-  		}
-  		table[class="v-body"] td[class="v-body__item"] table {
-  			text-align: center !important;
-  		}
-  		table[class="v-date"] {
-  			display: block !important;
-  		}
-  		table[class="v-date"] td[class="v-date__item"] {
-  			display: block !important;
-  			text-align: left !important;
-  		}
-  	}
-  </style>
+	<style>
+		@media only screen and (max-width: 500px) {
+			table[class="v-footer"] td {
+				display: block !important;
+			}
+			table[class="v-body"] {
+				display: block !important;
+			}
+			table[class="v-body"] td[class="v-body__item"] {
+				display: block !important;
+			}
+			table[class="v-body"] td[class="v-body__hidden"] {
+				display: none !important;
+			}
+			table[class="v-body"] td[class="v-body__item"] table {
+				text-align: center !important;
+			}
+			table[class="v-date"] {
+				display: block !important;
+			}
+			table[class="v-date"] td[class="v-date__item"] {
+				display: block !important;
+				text-align: left !important;
+			}
+		}
+	</style>
 {% endblock %}
